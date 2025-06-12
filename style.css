@@ -1,0 +1,557 @@
+/* Estilos Gerais */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 3.2em;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+p.section-description {
+    text-align: center;
+    font-size: 1.1em;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.btn-primary, .btn-secondary, .btn-primary-bottom {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+}
+
+.btn-primary, .btn-primary-bottom {
+    background-color: #ff6f61; /* Vermelho vibrante */
+    color: #fff;
+    border: none;
+}
+
+.btn-primary:hover, .btn-primary-bottom:hover {
+    background-color: #e65c50;
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    background-color: #4CAF50; /* Verde para ação secundária ou planos */
+    color: #fff;
+    border: none;
+}
+
+.btn-secondary:hover {
+    background-color: #45a049;
+    transform: translateY(-3px);
+}
+
+
+/* Seção Principal (Hero Section) */
+.hero {
+    background: linear-gradient(to right, #2c3e50, #34495e); /* Azul escuro com gradiente */
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh; /* Altura mínima da tela */
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.1"><circle cx="50" cy="50" r="40" fill="white"/></svg>'); /* Exemplo de padrão geométrico leve */
+    background-repeat: repeat;
+    background-size: 100px;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+
+.hero .container {
+    z-index: 1; /* Garante que o conteúdo fique acima da imagem de fundo */
+    max-width: 900px;
+}
+
+.hero h1 {
+    font-size: 3.8em;
+    margin-bottom: 20px;
+    color: #fff;
+    line-height: 1.2;
+}
+
+.hero .subtitle {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+.hero .btn-primary {
+    padding: 18px 40px;
+    font-size: 1.2em;
+    background-color: #4CAF50; /* Verde vibrante para CTA principal */
+    color: #fff;
+}
+
+.hero .btn-primary:hover {
+    background-color: #45a049;
+}
+
+.hero-image-placeholder {
+    margin-top: 50px;
+    width: 80%;
+    max-width: 800px;
+    height: 350px;
+    background-color: #ccc; /* Cor para o placeholder da imagem/vídeo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 1.5em;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Seção de Benefícios */
+.benefits {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.benefits h2 {
+    color: #333;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.benefit-item {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.benefit-item:hover {
+    transform: translateY(-10px);
+}
+
+.benefit-item .icon {
+    font-size: 3.5em;
+    color: #ff6f61; /* Cor dos ícones */
+    margin-bottom: 20px;
+}
+
+.benefit-item h3 {
+    font-size: 1.6em;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.benefit-item p {
+    font-size: 1em;
+    color: #666;
+}
+
+/* Seção Como Funciona */
+.how-it-works {
+    padding: 80px 0;
+    background-color: #e8f5e9; /* Um verde bem claro */
+}
+
+.how-it-works h2 {
+    color: #2c3e50;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.step-item {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    position: relative;
+    padding-top: 70px; /* Espaço para o número */
+}
+
+.step-item .step-number {
+    background-color: #ff6f61;
+    color: #fff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2em;
+    font-weight: 700;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid #e8f5e9; /* Borda para destaque */
+}
+
+.step-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.step-item p {
+    font-size: 1em;
+    color: #666;
+}
+
+/* Seção de Depoimentos */
+.testimonials {
+    padding: 80px 0;
+    background-color: #fcfcfc;
+}
+
+.testimonials h2 {
+    color: #333;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.testimonial-item {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    font-style: italic;
+    position: relative;
+}
+
+.testimonial-item p {
+    margin-bottom: 15px;
+    color: #444;
+    font-size: 1.1em;
+}
+
+.testimonial-item cite {
+    display: block;
+    text-align: right;
+    font-style: normal;
+    font-weight: 600;
+    color: #ff6f61;
+    margin-top: 20px;
+}
+
+/* Seção de Dúvidas Frequentes (FAQ) */
+.faq {
+    padding: 80px 0;
+    background-color: #f0f4f7; /* Um azul bem claro */
+}
+
+.faq h2 {
+    color: #2c3e50;
+}
+
+.faq-item {
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+.faq-item h3 {
+    color: #ff6f61;
+    margin-top: 0;
+    font-size: 1.3em;
+    cursor: pointer; /* Indica que é clicável para expandir */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-item p {
+    margin-top: 15px;
+    color: #555;
+    /* Por padrão, podemos esconder as respostas e mostrá-las com JS, mas para este exemplo, elas estão visíveis */
+}
+
+/* Seção de Planos */
+.plans {
+    padding: 80px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.plans h2 {
+    color: #333;
+}
+
+.plans-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+    justify-content: center;
+}
+
+.plan-card {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.plan-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.plan-card.featured {
+    background-color: #e0ffe0; /* Um verde mais claro para o plano em destaque */
+    border: 2px solid #4CAF50;
+    transform: scale(1.03);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.plan-card h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.plan-card .price {
+    font-size: 2.8em;
+    font-weight: 700;
+    color: #ff6f61;
+    margin-bottom: 10px;
+}
+
+.plan-card .price span {
+    font-size: 0.5em;
+    color: #666;
+    font-weight: 400;
+}
+
+.plan-card .economy {
+    font-size: 0.95em;
+    color: #4CAF50;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.plan-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 30px;
+    flex-grow: 1; /* Faz a lista ocupar o espaço restante */
+}
+
+.plan-card ul li {
+    margin-bottom: 10px;
+    font-size: 1.05em;
+    color: #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.plan-card ul li .fas {
+    color: #4CAF50;
+    margin-right: 10px;
+}
+
+.plans .btn-secondary {
+    width: 90%;
+    padding: 12px 20px;
+    font-size: 1em;
+    margin-top: auto; /* Empurra o botão para a parte inferior do card */
+}
+
+.call-to-action-bottom {
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
+.btn-primary-bottom {
+    padding: 18px 50px;
+    font-size: 1.4em;
+}
+
+/* Seção de Contato */
+.contact {
+    padding: 80px 0;
+    background-color: #e0e7ed; /* Um cinza azulado claro */
+    text-align: center;
+}
+
+.contact p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: calc(100% - 20px);
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Rodapé */
+footer {
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.9em;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero .subtitle {
+        font-size: 1.2em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    .benefits-grid,
+    .steps-grid,
+    .testimonial-grid,
+    .plans-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .plan-card.featured {
+        transform: scale(1.0); /* Remove o scaling em telas menores */
+    }
+
+    .btn-primary, .btn-secondary, .btn-primary-bottom {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+
+    .hero-image-placeholder {
+        height: 250px;
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero .subtitle {
+        font-size: 1em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    .benefit-item .icon {
+        font-size: 3em;
+    }
+
+    .step-item .step-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.8em;
+        top: -25px;
+    }
+
+    .plan-card .price {
+        font-size: 2.2em;
+    }
+
+    .call-to-action-bottom {
+        font-size: 1.5em;
+    }
+}
