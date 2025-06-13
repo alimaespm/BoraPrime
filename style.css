@@ -80,8 +80,7 @@ p.section-description {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    min-height: 70vh; /* Altura mínima da tela */
+    justify-content: flex-start;
     position: relative;
     overflow: hidden;
 }
@@ -134,8 +133,7 @@ p.section-description {
     margin-top: 50px;
     width: 80%;
     max-width: 800px;
-    height: 350px;
-    background-color: #ccc; /* Cor para o placeholder da imagem/vídeo */
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -143,6 +141,7 @@ p.section-description {
     font-size: 1.5em;
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
 }
 
 /* Seção de Benefícios */
@@ -554,4 +553,11 @@ footer {
     .call-to-action-bottom {
         font-size: 1.5em;
     }
+}
+/* Estilo para a imagem/vídeo na seção hero */
+.hero-media {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem/vídeo cubra todo o espaço, cortando o que for necessário */
+    border-radius: 10px; /* Mantém o mesmo arredondamento do placeholder */
 }
